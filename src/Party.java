@@ -23,7 +23,7 @@ public class Party {
     private final JButton partyIconButtons[] = new JButton[partyIconNames.length];
 
     private final Font titleFont = new Font("Copperplate Gothic Bold", Font.PLAIN, 50);
-    private final Font menuFont = new Font("Copperplate Gothic Bold", Font.PLAIN, 15);
+    private final Font menuFont = new Font("Copperplate Gothic Bold", Font.PLAIN, 14);
     private final Font menuFontHover = new Font("Copperplate Gothic Bold", Font.PLAIN, 24);
 
 
@@ -198,16 +198,6 @@ public class Party {
         backgroundPanel.setVisible(value);
     }
 
-    public boolean checkParty(int i) {
-        if(selectedParty[i] == "")
-            return false;
-        return true;
-    }
-
-    public String[] getParty() {
-        return selectedParty;
-    }
-
     // passparty to dungeon
     public Entity[] passParty() {
         return charParty;
@@ -255,11 +245,6 @@ public class Party {
         }
         updateIcons(pHandler);
     }
-
-    public void setPartySlot(int i, GameController.PartyHandler pHandler) {
-        counter = i;
-        updateIcons(pHandler);
-    }
     
     public void setWait(boolean input) { wait = input; }
     public boolean getWait() { return wait; }
@@ -276,7 +261,7 @@ public class Party {
                 btn.setIcon(icon);
             }
             else {
-                btn = new JButton("?");
+                btn = new JButton();
             }
             /*if(i == counter) {
                 btn.setBorder(new LineBorder(Color.BLACK));

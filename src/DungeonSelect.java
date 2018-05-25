@@ -11,11 +11,11 @@ public class DungeonSelect {
     private JButton dsEnter, dsExit, selectedButton;
     
     //array to hold button text (sizes)
-    private final String dSizeNames[] = {"3", "5", "8"};
+    private final String dSizeNames[] = {"Small", "Medium", "Large"};
     private final JButton dSizeButtons[] = new JButton[dSizeNames.length];
 
     private final Font titleFont = new Font("Copperplate Gothic Bold", Font.PLAIN, 50);
-    private final Font menuFont = new Font("Copperplate Gothic Bold", Font.PLAIN, 15);
+    private final Font menuFont = new Font("Copperplate Gothic Bold", Font.PLAIN, 14);
     private final Font menuFontHover = new Font("Copperplate Gothic Bold", Font.PLAIN, 24);
     
     private boolean wait = true;
@@ -41,7 +41,7 @@ public class DungeonSelect {
         dSelectButtonPanel = new JPanel();
         dSelectButtonPanel.setBounds(300, 300, 200, 150);
         dSelectButtonPanel.setBackground(Color.black);
-        dSelectButtonPanel.setLayout(new GridLayout(3, 1, 0, 0)); // GridLayout(row, col, colgap, rowgap);
+        dSelectButtonPanel.setLayout(new GridLayout(3, 1, 0, 20)); // GridLayout(row, col, colgap, rowgap);
         dSelectButtonPanel.setOpaque(false);
         
         //enter panel
@@ -113,7 +113,7 @@ public class DungeonSelect {
                     selectedButton.setBorderPainted(true);
                 }
             });
-            btn.setBorder(new LineBorder(Color.RED));
+            btn.setBorder(new LineBorder(Color.GREEN));
             btn.setBackground(Color.darkGray);
             btn.setForeground(Color.white);
             btn.setFont(menuFont);

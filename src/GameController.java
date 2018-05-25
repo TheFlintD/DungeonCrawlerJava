@@ -195,7 +195,7 @@ public class GameController extends JFrame {
                     displayCH(false);
                     displayP(true);
                     break;
-                case "hub2" :
+                case "hub1" :
                     System.out.println("Enter Menu");
                     displayCH(false);
                     displayTS(true);
@@ -251,6 +251,7 @@ public class GameController extends JFrame {
                     break;
                 case "exit" :
                     System.out.println("Enter Hub");
+                    p.setWait(true);
                     p.clearParty(pHandler);
                     displayP(false);
                     displayCH(true);
@@ -262,6 +263,8 @@ public class GameController extends JFrame {
                         displayP(false);
                         displayDS(true);
                     }
+                    else
+                        System.out.println("Please select a character");
                     break;
             }
             render();
@@ -294,6 +297,8 @@ public class GameController extends JFrame {
                         displayDS(false);
                         updateDungeon(true);
                     }
+                    else
+                        System.out.println("Please select a dungeon size");
                     break;
                 case "exit"  :
                     System.out.println("Backing to Party Select");
